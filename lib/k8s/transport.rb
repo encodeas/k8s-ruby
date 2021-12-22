@@ -170,7 +170,7 @@ module K8s
     def build_excon
       Excon.new(
         @server,
-        persistent: true,
+        persistent: false,
         middlewares: EXCON_MIDDLEWARES,
         headers: REQUEST_HEADERS,
         **@options
